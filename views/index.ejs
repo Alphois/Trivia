@@ -7,15 +7,15 @@
 <body>
   <h1><%= title %></h1>
 
-  
   <% if (user) { %>
-    <p>Welcome, <%= user.username %>! <a href="/users/logout">Logout</a></p>
+    <p class="auth-links">Welcome, <%= user.username %>! <a href="/users/logout">Logout</a></p>
   <% } else { %>
     <p class="auth-links">
       <a href="/users/login">Login</a> or 
       <a href="/users/signup">Signup</a>
     </p>
   <% } %>
+
   <h2>Start a New Quiz</h2>
   <form action="/quiz" method="post">
     <label for="amount">Number of Questions:</label>
@@ -48,13 +48,11 @@
         <option value="30">Science: Gadgets</option>
         <option value="31">Entertainment: Japanese Anime &amp; Manga</option>
         <option value="32">Entertainment: Cartoon &amp; Animations</option>
-      <!-- Add other categories as needed -->
     </select>
     
     <label for="difficulty">Difficulty:</label>
     <select id="difficulty" name="difficulty">
         <option value="">Any Difficulty</option>
-
         <option value="easy">Easy</option>
         <option value="medium">Medium</option>
         <option value="hard">Hard</option>
@@ -62,7 +60,7 @@
     
     <label for="type">Type:</label>
     <select id="type" name="type">
-        <option value="">Any </option>
+        <option value="">Any Type</option>
         <option value="multiple">Multiple Choice</option>
         <option value="boolean">True/False</option>
     </select>
@@ -89,31 +87,4 @@
           <% }); %>
         </ul>
       <% } else { %>
-        <p>No scores available.</p>
-      <% } %>
-    </div>
-    
-    <div class="leaderboard">
-      <h2>Global Best Scores</h2>
-      <% if (globalScores.length > 0) { %>
-        <ul>
-          <% globalScores.forEach(function(score, index) { %>
-            <li>
-              <div class="rank"><%= index + 1 %></div>
-              <div class="username">
-                <img src="https://via.placeholder.com/40" alt="User Avatar">
-                <%= score.username %>
-              </div>
-              <div class="score"><%= score.score %></div>
-              <div class="datetime"><%= new Date(score.datetime).toLocaleString() %></div>
-              <a href="/leaderboard/details/<%= score.id %>">Details</a> <!-- Add link to details page -->
-            </li>
-          <% }); %>
-        </ul>
-      <% } else { %>
-        <p>No scores available.</p>
-      <% } %>
-    </div>
-  </div>
-</body>
-</html>
+        <p
