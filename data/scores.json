@@ -247,6 +247,26 @@
       "difficulty": "easy",
       "type": "boolean",
       "datetime": "2024-06-27T14:46:54.722Z"
+    },
+    {
+      "id": 26,
+      "username": "nims",
+      "score": 1,
+      "amount": "1",
+      "category": "",
+      "difficulty": "",
+      "type": "",
+      "datetime": "2024-06-27T14:51:17.781Z"
+    },
+    {
+      "id": 27,
+      "username": "nims",
+      "score": 3,
+      "amount": "12",
+      "category": "",
+      "difficulty": "easy",
+      "type": "boolean",
+      "datetime": "2024-06-27T14:51:40.279Z"
     }
   ]
 }
