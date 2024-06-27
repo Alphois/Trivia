@@ -119,3 +119,20 @@ form div {
 form div input[type="radio"] {
   margin-right: 10px;
 }
+/* Add this to your style.css file */
+
+.auth-links {
+  font-size: 1.2em; /* Make the text larger */
+  font-weight: bold; /* Make the text bold */
+  color: #007bff; /* Change the text color */
+}
+
+.auth-links a {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit color from parent */
+  margin-right: 10px; /* Add some space between the links */
+}
+
+.auth-links a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
