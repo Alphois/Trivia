@@ -227,6 +227,26 @@
       "difficulty": "",
       "type": "",
       "datetime": "2024-06-27T13:22:01.580Z"
+    },
+    {
+      "id": 24,
+      "username": "nims",
+      "score": 0,
+      "amount": "1",
+      "category": "",
+      "difficulty": "",
+      "type": "",
+      "datetime": "2024-06-27T14:45:53.713Z"
+    },
+    {
+      "id": 25,
+      "username": "nims",
+      "score": 5,
+      "amount": "12",
+      "category": "",
+      "difficulty": "easy",
+      "type": "boolean",
+      "datetime": "2024-06-27T14:46:54.722Z"
     }
   ]
 }
