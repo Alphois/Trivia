@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scores</title>
+</head>
+<body>
+  <h1>Game Scores</h1>
+  <ul>
+    <% games.forEach(game => { %>
+      <li>Game ID: <%= game.id %> - Score: <%= game.score %> - Total Questions: <%= game.totalQuestions %> - Category: <%= game.category %> - Difficulty: <%= game.difficulty %></li>
+    <% }) %>
+  </ul>
+</body>
+</html>

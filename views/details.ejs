@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+  <h1><%= title %></h1>
+  <ul>
+    <li>Username: <%= score.username %></li>
+    <li>Score: <%= score.score %></li>
+    <li>Number of Questions: <%= score.amount %></li>
+    <li>Difficulty: <%= score.difficulty %></li>
+    <li>Type: <%= score.type %></li>
+    <li>Category: <%= score.category %></li>
+    <li>Date: <%= new Date(score.datetime).toLocaleString() %></li>
+  </ul>
+  <a href="/">Back to Home</a>
+</body>
+</html>
+

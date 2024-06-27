@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/quiz.css' />
+</head>
+<body>
+  <h1>Question <%= currentQuestionIndex + 1 %> of <%= parsedQuestions.length %></h1>
+  <div class="question-container">
+    <p><%= parsedQuestions[currentQuestionIndex].question %></p>
+  </div>
+
+  <% if (feedback) { %>
+    <p class="feedback"><%= feedback %></p>
+  <% } %>
+
+  <form action="/quiz/answer" method="post">
+    <% parsedQuestions[currentQuestionIndex].incorrect_answers
+       .concat(parsedQuestions[currentQuestionIndex].correct_answer)
+       .sort()
+       .forEach((answer, index) => { %>
+      <div>
+        <input type="radio" name="selectedAnswer" value="<%= answer %>" id="answer<%= index %>" required>
+        <label for="answer<%= index %>"><%= answer %></label>
+      </div>
+    <% }); %>
+    <input type="hidden" name="questions" value='<%= JSON.stringify(parsedQuestions) %>'>
+    <input type="hidden" name="currentQuestionIndex" value="<%= currentQuestionIndex %>">
+    <input type="hidden" name="score" value="<%= score %>">
+    <input type="hidden" name="amount" value="<%= amount %>">
+    <input type="hidden" name="category" value="<%= category %>">
+    <input type="hidden" name="difficulty" value="<%= difficulty %>">
+    <input type="hidden" name="type" value="<%= type %>">
+    <button type="submit">Submit Answer</button>
+  </form>
+
+  <p class="current-score">Current Score: <%= score %></p>
+</body>
+</html>

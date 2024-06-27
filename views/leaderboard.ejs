@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+  <h1><%= title %></h1>
+
+  <% if (user) { %>
+    <p>Welcome, <%= user.username %>! <a href="/users/logout">Logout</a></p>
+  <% } else { %>
+    <p><a href="/users/login">Login</a> or <a href="/users/signup">Signup</a></p>
+  <% } %>
+
+  <h2>Leaderboard</h2>
+  <% if (scores.length > 0) { %>
+    <ul>
+      <% scores.forEach(function(score, index) { %>
+        <li>
+          <div class="rank"><%= index + 1 %></div>
+          <div class="username">
+            <img src="https://via.placeholder.com/40" alt="User Avatar">
+            <%= score.username %>
+          </div>
+          <div class="score"><%= score.score %></div>
+          <div class="datetime"><%= new Date(score.datetime).toLocaleString() %></div>
+          <a href="/leaderboard/details/<%= score.id %>">Details</a> <!-- Add link to details page -->
+        </li>
+      <% }); %>
+    </ul>
+  <% } else { %>
+    <p>No scores available.</p>
+  <% } %>
+</body>
+</html>
