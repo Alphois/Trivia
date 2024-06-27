@@ -115,7 +115,7 @@
                 <%= score.username %>
               </div>
               <div class="score"><%= score.score %></div>
-              <div class="datetime"><%= new Date(score.datetime).toLocaleString() %></div>
+              <div class="datetime"><%= new Date(score.datetime).toLocaleString('en-US', { timeZone: 'America/New_York' }) %> EST</div>
               <a href="/leaderboard/details/<%= score.id %>">Details</a>
             </li>
           <% }); %>
