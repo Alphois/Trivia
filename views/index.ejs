@@ -72,7 +72,7 @@
     <div class="leaderboard">
       <h2>Your Best Scores</h2>
       <% if (userScores.length > 0) { %>
-        <ul>
+        <ul class="leaderboard-list">
           <li class="leaderboard-header">
             <div class="rank">Rank</div>
             <div class="username">User</div>
@@ -80,7 +80,7 @@
             <div class="datetime">Date</div>
           </li>
           <% userScores.forEach(function(score, index) { %>
-            <li>
+            <li class="leaderboard-item">
               <div class="rank"><%= index + 1 %></div>
               <div class="username">
                 <img src="https://via.placeholder.com/40" alt="User Avatar">
@@ -100,7 +100,7 @@
     <div class="leaderboard">
       <h2>Global Best Scores</h2>
       <% if (globalScores.length > 0) { %>
-        <ul>
+        <ul class="leaderboard-list">
           <li class="leaderboard-header">
             <div class="rank">Rank</div>
             <div class="username">User</div>
@@ -108,7 +108,7 @@
             <div class="datetime">Date</div>
           </li>
           <% globalScores.forEach(function(score, index) { %>
-            <li>
+            <li class="leaderboard-item">
               <div class="rank"><%= index + 1 %></div>
               <div class="username">
                 <img src="https://via.placeholder.com/40" alt="User Avatar">

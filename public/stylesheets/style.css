@@ -162,9 +162,41 @@ form div input[type="radio"] {
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
+  background-color: #333; /* Add background color to header */
+  color: #fff; /* Add text color to header */
 }
 
 .leaderboard-header > div {
   flex: 1;
   text-align: center;
+}
+
+.leaderboard-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.leaderboard-item > div {
+  flex: 1;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.leaderboard-item .rank,
+.leaderboard-item .username,
+.leaderboard-item .score,
+.leaderboard-item .datetime {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leaderboard-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
